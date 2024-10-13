@@ -36,18 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
         modalImage.src = getPokemonImage(pokemon.name);
         modalName.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
         modalDetails.textContent = `Height: ${pokemon.height}, Weight: ${pokemon.weight}`;
-        modal.style.display = "block";
+        modal.style.display = "block";  // Mostrar el modal solo cuando se selecciona un Pokémon
     }
 
+    // Cerrar el modal
     closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
+        modal.style.display = "none";  // Ocultar el modal al cerrar
     });
 
+    // Cerrar el modal al hacer clic fuera del contenido
     window.addEventListener("click", (event) => {
         if (event.target === modal) {
-            modal.style.display = "none";
+            modal.style.display = "none";  // Ocultar el modal si el usuario hace clic fuera del modal
         }
     });
+
+    // Ocultar el modal inicialmente
+    modal.style.display = "none";  // Asegurarse de que el modal esté oculto al cargar la página
 
     fetchPokemons();
 });

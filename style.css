@@ -30,25 +30,36 @@ body {
 }
 
 .modal {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+
+    /* Usamos flexbox para centrar el modal */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: 3px solid black; /* Borde negro */
+    border-radius: 15px; /* Bordes redondeados */
     max-width: 500px;
+    width: 100%; /* Asegura que el contenido ocupe un máximo de 500px */
+    box-sizing: border-box; /* Asegura que padding y border estén incluidos en el ancho */
+    text-align: center; /* Centra el contenido del modal */
+}
+
+.modal img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .close-button {
