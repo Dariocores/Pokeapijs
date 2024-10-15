@@ -30,7 +30,7 @@ body {
 }
 
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -38,22 +38,20 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.4);
-
-    /* Usamos flexbox para centrar el modal */
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
     background-color: #fff;
     padding: 20px;
-    border: 3px solid black; /* Borde negro */
-    border-radius: 15px; /* Bordes redondeados */
+    border: 3px solid black;
+    border-radius: 15px;
     max-width: 500px;
-    width: 100%; /* Asegura que el contenido ocupe un máximo de 500px */
-    box-sizing: border-box; /* Asegura que padding y border estén incluidos en el ancho */
-    text-align: center; /* Centra el contenido del modal */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .modal img {
